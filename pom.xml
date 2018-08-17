@@ -30,6 +30,14 @@
         </developer>
     </developers>
 
+
+    <scm>
+        <connection>scm:git:https://github.com/sovannarithcheav/tk-framework.git</connection>
+        <developerConnection>scm:git:git@github.com/sovannarithcheav/tk-framework.git</developerConnection>
+        <url>https://github.com/sovannarithcheav/tk-framework</url>
+    </scm>
+
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
