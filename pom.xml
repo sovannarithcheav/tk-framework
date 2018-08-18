@@ -4,13 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tkk</groupId>
+    <groupId>com.tk</groupId>
     <artifactId>framework</artifactId>
     <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>framework</name>
     <description>Demo project for Spring Boot</description>
+
+    <url>https://github.com/sovannarithcheav/tk-framework</url>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -49,6 +51,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.mixpanel/mixpanel-java -->
+        <dependency>
+            <groupId>com.mixpanel</groupId>
+            <artifactId>mixpanel-java</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+
     </dependencies>
 
     <build>
