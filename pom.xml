@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tk</groupId>
-    <artifactId>framework</artifactId>
+    <artifactId>tk-framework</artifactId>
     <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>framework</name>
+    <name>tk-framework</name>
     <description>Demo project for Spring Boot</description>
 
     <url>https://github.com/sovannarithcheav/tk-framework</url>
