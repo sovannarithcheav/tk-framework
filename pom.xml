@@ -6,7 +6,7 @@
 
     <groupId>com.tk</groupId>
     <artifactId>framework</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>framework</name>
@@ -70,7 +70,7 @@
             <plugin>
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
-                <version>0.8</version>
+                <!--<version>0.8</version>-->
                 <configuration>
                     <!-- git commit message -->
                     <message>Maven artifacts for ${project.version}</message>
@@ -79,7 +79,7 @@
                     <!-- matches distribution management repository url above -->
                     <outputDirectory>${project.build.directory}/tk-framework</outputDirectory>
                     <!-- remote branch name -->
-                    <branch>refs/heads/tk-framework</branch>
+                    <branch>master</branch>
                     <!-- If you remove this then the old artifact will be removed and new
                      one will replace. But with the merge tag you can just release by changing
                                                       the version -->
