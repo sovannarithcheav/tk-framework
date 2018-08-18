@@ -33,7 +33,11 @@
             <url>file://${project.build.directory}/tk-framework</url>
         </repository>
     </distributionManagement>
-
+    <scm>
+        <connection>scm:git:https://github.com/sovannarithcheav/tk-framework.git</connection>
+        <developerConnection>scm:git:git@github.com/sovannarithcheav/tk-framework.git</developerConnection>
+        <url>https://github.com/sovannarithcheav/tk-framework</url>
+    </scm>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
