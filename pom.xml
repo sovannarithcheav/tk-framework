@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tk</groupId>
-    <artifactId>tk-framework</artifactId>
+    <artifactId>framework</artifactId>
     <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>tk-framework</name>
+    <name>framework</name>
     <description>Demo project for Spring Boot</description>
 
     <url>https://github.com/sovannarithcheav/tk-framework</url>
@@ -34,7 +34,12 @@
             <name>Temporary Staging Repository</name>
             <url>file://${project.build.directory}/tk-framework</url>
         </repository>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
+
     <scm>
         <connection>scm:git:https://github.com/sovannarithcheav/tk-framework.git</connection>
         <developerConnection>scm:git:git@github.com/sovannarithcheav/tk-framework.git</developerConnection>
@@ -119,6 +124,17 @@
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.3</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>
