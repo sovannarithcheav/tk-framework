@@ -4,7 +4,7 @@
 
     <groupId>com.tk</groupId>
     <artifactId>framework</artifactId>
-    <version>fix bug</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>framework</name>
