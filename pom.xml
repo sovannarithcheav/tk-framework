@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tk</groupId>
     <artifactId>framework</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+
+
+    <distributionManagement>
+        <repository>
+            <id></id>
+        </repository>
+        <snapshotRepository>
+            <id>tk-framework-staging</id>
+            <url>file://${project.build.directory}/staging/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <name>framework</name>
     <description>Demo project for Spring Boot</description>
-
-    <url>https://github.com/sovannarithcheav/tk-framework</url>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.3.RELEASE</version>
-        <relativePath /> <!-- lookup parent from repository -->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
@@ -26,13 +36,6 @@
         <github.global.server>github</github.global.server>
     </properties>
 
-    <scm>
-        <connection>scm:git:https://github.com/sovannarithcheav/tk-framework.git</connection>
-        <developerConnection>scm:git:git@github.com:sovannarithcheav/tk-framework.git
-        </developerConnection>
-        <url>https://github.com/sovannarithcheav/tk-framework</url>
-      <tag>tk-framework</tag>
-  </scm>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -47,13 +50,6 @@
 
     </dependencies>
 
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <build>
         <finalName>${project.artifactId}-${project.version}</finalName>
@@ -71,37 +67,34 @@
                         <showDeprecation>true</showDeprecation>
                     </configuration>
                 </plugin>
-                <!--<plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
-                    <configuration>
-                        <skip>true</skip>
-                    </configuration>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.5.3</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.sonatype.plugins</groupId>
-                    <artifactId>nexus-staging-maven-plugin</artifactId>
-                    <version>1.5.1</version>
+                    <groupId>com.github.github</groupId>
+                    <artifactId>site-maven-plugin</artifactId>
+                    <version>0.12</version>
+                    <configuration>
+                        <outputDirectory>${project.build.directory}/staging/</outputDirectory>
+                        <includes><include>**/*</include></includes>
+                        <repositoryOwner>sovannarithcheav</repositoryOwner>
+                        <repositoryName>maven-repo-test</repositoryName>
+                        <branch>refs/heads/master</branch>
+                        <userName>sovannarithcheav</userName>
+                        <password>Rith04091996</password>
+                        <message>Deploy artifacts for ${project.version}</message>
+                    </configuration>
                     <executions>
                         <execution>
-                            <id>default-deploy</id>
+                            <goals><goal>site</goal></goals>
                             <phase>deploy</phase>
-                            <goals>
-                                <goal>deploy</goal>
-                            </goals>
                         </execution>
                     </executions>
-                    <configuration>
-                        <serverId>nexus</serverId>
-                        <nexusUrl>http://192.168.168.112:8080</nexusUrl>
-                        <skipStaging>true</skipStaging>
-                    </configuration>
-                </plugin>-->
+                </plugin>
             </plugins>
         </pluginManagement>
 
     </build>
-
-
 </project>
